@@ -1,0 +1,35 @@
+nav {
+  display: flex;
+  font-weight: bold;
+  font-family: 'Roboto';
+  justify-content: space-between;
+}
+.image3 {
+  width: 100px;
+}
+.image4 {
+  width: 50px;
+}
+.nav-img-container1 {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list-container {
+  display: flex;
+  list-style-type: none;
+  width: 300px;
+  padding: 10px;
+  justify-content: space-between;
+}
+
+@media all and (max-width: 768px) {
+  .nav-list-container {
+    display: none;
+  }
+}
+@media (min-width: 769px) {
+  .nav-img-container2 {
+    display: none;
+  }
+}
