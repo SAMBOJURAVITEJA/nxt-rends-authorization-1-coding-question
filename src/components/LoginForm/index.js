@@ -1,4 +1,7 @@
+
 import {Component} from 'react'
+
+import {Link} from 'react-router-dom'
 
 import './index.css'
 
@@ -46,47 +49,49 @@ class LoginForm extends Component {
     const {Loader, dataError} = this.state
 
     return (
-      <div className="bg-container">
-        <form className="card-container" onSubmit={this.submitting}>
-          <div className="img-container">
-            <img
-              className="image1"
-              src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-login-img.png"
-              alt="website login"
-            />
-          </div>
-          <div className="input-container">
-            <div className="nav-img-container">
+      <Link to="/login">
+        <div className="bg-container">
+          <form className="card-container" onSubmit={this.submitting}>
+            <div className="img-container">
               <img
-                className="image3"
-                src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-logo-img.png"
-                alt="website logo"
+                className="image1"
+                src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-login-img.png"
+                alt="website login"
               />
             </div>
-            <label htmlFor="text">USERNAME</label>
-            <br />
-            <input
-              placeholder="Username"
-              onChange={this.username}
-              type="text"
-              id="text"
-            />
-            <br />
-            <label htmlFor="password">PASSWORD</label>
-            <br />
-            <input
-              placeholder="Password"
-              onChange={this.password}
-              type="password"
-              id="password"
-            />
-            <br />
+            <div className="input-container">
+              <div className="nav-img-container">
+                <img
+                  className="image3"
+                  src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-logo-img.png"
+                  alt="website logo"
+                />
+              </div>
+              <label htmlFor="text">USERNAME</label>
+              <br />
+              <input
+                placeholder="Username"
+                onChange={this.username}
+                type="text"
+                id="text"
+              />
+              <br />
+              <label htmlFor="password">PASSWORD</label>
+              <br />
+              <input
+                placeholder="Password"
+                onChange={this.password}
+                type="password"
+                id="password"
+              />
+              <br />
 
-            <button type="submit">Login</button>
-            {Loader ? <p className="error">{dataError}</p> : null}
-          </div>
-        </form>
-      </div>
+              <button type="submit">Login</button>
+              {Loader ? <p className="error">{dataError}</p> : null}
+            </div>
+          </form>
+        </div>
+      </Link>
     )
   }
 }
